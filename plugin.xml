@@ -85,11 +85,33 @@
         <param name="onload" value="true"/>
       </feature>
 
+      <feature name="prueba">
+       <universal-links>
+        <host name="example.com" scheme="https" event="ul_myExampleEvent" />
+       </universal-links>
+      </feature>
+
     <universal-links>
         <host name="example.com" scheme="https" event="ul_myExampleEvent" />
     </universal-links>
 
+    <universal-links>
+    <host name="example.com">
+        <path url="/some/path" />
+    </host>
+</universal-links>
+
     </config-file>
+
+    <universal-links>
+    <host name="example.com">
+        <path url="/some/path" />
+    </host>
+    </universal-links>
+
+        <universal-links>
+        <host name="example.com" scheme="https" event="ul_myExampleEvent" />
+    </universal-links>
 
 <!-- Java Library Sources -->
 <!-- sources for package: com.nordnetab.cordova.ul.js -->
@@ -111,6 +133,12 @@
 
   <universal-links>
     <host name="example.com" scheme="https" event="ul_myExampleEvent" />
+</universal-links>
+
+<universal-links>
+    <host name="example.com">
+        <path url="/some/path" />
+    </host>
 </universal-links>
 
 
