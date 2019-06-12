@@ -83,6 +83,12 @@
       <feature name="UniversalLinks">
         <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin"/>
         <param name="onload" value="true"/>
+
+      <universal-links>
+        <host name="example.com" scheme="https" event="ul_myExampleEvent" />
+    </universal-links>
+
+
       </feature>
     </config-file>
 
@@ -103,4 +109,10 @@
     <source-file src="src/android/com/nordnetab/cordova/ul/UniversalLinksPlugin.java" target-dir="src/com/nordnetab/cordova/ul/"/>
 
   </platform>
+
+  <universal-links>
+    <host name="example.com" scheme="https" event="ul_myExampleEvent" />
+</universal-links>
+
+
 </plugin>
