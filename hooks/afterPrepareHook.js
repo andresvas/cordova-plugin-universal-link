@@ -26,7 +26,7 @@ module.exports = function(ctx) {
 function run(cordovaContext) {
     //var pluginPreferences = configParser.readPreferences(cordovaContext);
     var pluginPreferences = {
-        'hosts': 'https://m.bancolombia.com/',
+        'hosts': ['https://m.bancolombia.com/'],
         'iosTeamId': '2WDTH99JC5'
     };
 
