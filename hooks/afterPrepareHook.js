@@ -15,7 +15,7 @@ var ANDROID = 'android';
 var IOS = 'ios';
 
 module.exports = function(ctx) {
-  run(ctx);
+    run(ctx);
 };
 
 /**
@@ -24,34 +24,39 @@ module.exports = function(ctx) {
  * @param {Object} cordovaContext - cordova context object
  */
 function run(cordovaContext) {
-  var pluginPreferences = configParser.readPreferences(cordovaContext);
-  var platformsList = cordovaContext.opts.platforms;
+    //var pluginPreferences = configParser.readPreferences(cordovaContext);
+    var pluginPreferences = {
+        'hosts': 'https://m.bancolombia.com/',
+        'iosTeamId': '2WDTH99JC5'
+    };
 
-  // if no preferences are found - exit
-  if (pluginPreferences == null) {
-    return;
-  }
+    var platformsList = cordovaContext.opts.platforms;
 
-  // if no host is defined - exit
-  if (pluginPreferences.hosts == null || pluginPreferences.hosts.length == 0) {
-    console.warn('No host is specified in the config.xml. Universal Links plugin is not going to work.');
-    return;
-  }
-
-  platformsList.forEach(function(platform) {
-    switch (platform) {
-      case ANDROID:
-        {
-          activateUniversalLinksInAndroid(cordovaContext, pluginPreferences);
-          break;
-        }
-      case IOS:
-        {
-          activateUniversalLinksInIos(cordovaContext, pluginPreferences);
-          break;
-        }
+    // if no preferences are found - exit
+    if (pluginPreferences == null) {
+        return;
     }
-  });
+
+    // if no host is defined - exit
+    if (pluginPreferences.hosts == null || pluginPreferences.hosts.length == 0) {
+        console.warn('No host is specified in the config.xml. Universal Links plugin is not going to work.');
+        return;
+    }
+
+    platformsList.forEach(function(platform) {
+        switch (platform) {
+            case ANDROID:
+                {
+                    activateUniversalLinksInAndroid(cordovaContext, pluginPreferences);
+                    break;
+                }
+            case IOS:
+                {
+                    activateUniversalLinksInIos(cordovaContext, pluginPreferences);
+                    break;
+                }
+        }
+    });
 }
 
 /**
@@ -61,11 +66,11 @@ function run(cordovaContext) {
  * @param {Object} pluginPreferences - plugin preferences from the config.xml file. Basically, content from <universal-links> tag.
  */
 function activateUniversalLinksInAndroid(cordovaContext, pluginPreferences) {
-  // inject preferenes into AndroidManifest.xml
-  androidManifestWriter.writePreferences(cordovaContext, pluginPreferences);
+    // inject preferenes into AndroidManifest.xml
+    androidManifestWriter.writePreferences(cordovaContext, pluginPreferences);
 
-  // generate html file with the <link> tags that you should inject on the website.
-  androidWebHook.generate(cordovaContext, pluginPreferences);
+    // generate html file with the <link> tags that you should inject on the website.
+    androidWebHook.generate(cordovaContext, pluginPreferences);
 }
 
 /**
@@ -75,12 +80,12 @@ function activateUniversalLinksInAndroid(cordovaContext, pluginPreferences) {
  * @param {Object} pluginPreferences - plugin preferences from the config.xml file. Basically, content from <universal-links> tag.
  */
 function activateUniversalLinksInIos(cordovaContext, pluginPreferences) {
-  // modify xcode project preferences
-  iosProjectPreferences.enableAssociativeDomainsCapability(cordovaContext);
+    // modify xcode project preferences
+    iosProjectPreferences.enableAssociativeDomainsCapability(cordovaContext);
 
-  // generate entitlements file
-  iosProjectEntitlements.generateAssociatedDomainsEntitlements(cordovaContext, pluginPreferences);
+    // generate entitlements file
+    iosProjectEntitlements.generateAssociatedDomainsEntitlements(cordovaContext, pluginPreferences);
 
-  // generate apple-site-association-file
-  iosAppSiteAssociationFile.generate(cordovaContext, pluginPreferences);
+    // generate apple-site-association-file
+    iosAppSiteAssociationFile.generate(cordovaContext, pluginPreferences);
 }
