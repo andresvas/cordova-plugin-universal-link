@@ -26,8 +26,12 @@ module.exports = function(ctx) {
 function run(cordovaContext) {
     //var pluginPreferences = configParser.readPreferences(cordovaContext);
     var pluginPreferences = {
-        'hosts': ['https://m.bancolombia.com/'],
-        'iosTeamId': '2WDTH99JC5'
+        hosts: [{
+            scheme: 'https',
+            name: 'https://m.bancolombia.com/',
+            paths: ['*']
+        }],
+        iosTeamId: '2WDTH99JC5'
     };
 
     var platformsList = cordovaContext.opts.platforms;
