@@ -28,7 +28,7 @@ function run(cordovaContext) {
     var pluginPreferences = {
         hosts: [{
             scheme: 'https',
-            name: 'https://m.bancolombia.com/',
+            name: 'm.bancolombia.com',
             paths: ['*']
         }],
         iosTeamId: '2WDTH99JC5'
