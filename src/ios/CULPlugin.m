@@ -83,7 +83,9 @@
     
     // Get supported hosts from the config.xml or www/ul.json.
     // For now priority goes to json config.
-    _supportedHosts = [self getSupportedHostsFromPreferences];
+    //_supportedHosts = [self getSupportedHostsFromPreferences];
+    
+    _supportedHosts  = [NSArray arrayWithObjects: [ [CULHost alloc] initWithHostName:@"prueba-jsalazar.herokuapp.com" scheme:@"https" event:nil]  , nil];
 }
 
 - (NSArray<CULHost *> *)getSupportedHostsFromPreferences {
