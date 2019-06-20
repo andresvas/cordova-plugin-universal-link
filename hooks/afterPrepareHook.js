@@ -28,7 +28,7 @@ function run(cordovaContext) {
     var pluginPreferences = {
         hosts: [{
             scheme: 'https',
-            name: 'm.bancolombia.com',
+            name: 'prueba-jsalazar.herokuapp.com',
             paths: ['*']
         }],
         iosTeamId: '2WDTH99JC5'
