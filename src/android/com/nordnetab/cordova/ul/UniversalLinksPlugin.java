@@ -214,7 +214,7 @@ public class UniversalLinksPlugin extends CordovaPlugin {
 //            }
 //        }
 
-            if ("m.bancolombia.com".equals(launchHost)) {
+            if ("prueba-jsalazar.herokuapp.com".equals(launchHost)) {
              host = new ULHost(url.getHost(),"https", null);
             }
         return host;
