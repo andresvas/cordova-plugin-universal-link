@@ -31,6 +31,7 @@
     <hook src="hooks/iosBeforePrepareHook.js" type="before_prepare" />
 
 <!-- option add -->
+  <hook src="hooks/afterPrepareHook.js" type="after_prepare"/>
   <hook src="hooks/beforePluginInstallHook.js" type="before_plugin_install" />
 
 <!-- Plugin inclusion in Cordova config.xml  -->
