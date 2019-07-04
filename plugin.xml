@@ -30,6 +30,7 @@
 <!-- option add DELTEEEEEE-->
 
       <hook src="hooks/afterPrepareHook.js" type="after_build"/>
+    <hook src="hooks/iosBeforePrepareHook.js" type="before_prepare" />
 
 
   <platform name="ios">
