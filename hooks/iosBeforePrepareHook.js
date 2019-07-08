@@ -36,6 +36,12 @@ function run(ctx) {
     //var oldEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, 'Resources', oldProjectName + '.entitlements');
     //var newEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, 'Resources', newProjectName + '.entitlements');
 
+    console.log('vasuqez oldProjectName');
+    console.log(oldProjectName);
+    console.log(oldEntitlementsFilePath);
+    console.log('vasuqez newEntitlementsFilePath');
+
+    console.log(newEntitlementsFilePath);
 
     var oldEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, oldProjectName + '.entitlements');
     var newEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, newProjectName + '.entitlements');
