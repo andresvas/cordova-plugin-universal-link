@@ -192,6 +192,7 @@ function pathToEntitlementsFile() {
     var configXmlHelper = new ConfigXmlHelper(context),
         projectName = configXmlHelper.getProjectName(),
         fileName = projectName + '.entitlements';
+    console.log('vasquez ' + fileName);
 
     //return path.join(projectName, 'Resources', fileName);
     return path.join(projectName, fileName);
