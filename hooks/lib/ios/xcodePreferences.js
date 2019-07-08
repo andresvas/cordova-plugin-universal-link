@@ -194,8 +194,8 @@ function pathToEntitlementsFile() {
         fileName = projectName + '.entitlements';
     console.log('vasquez ' + fileName);
 
-    //return path.join(projectName, 'Resources', fileName);
-    return path.join(projectName, fileName);
+    return path.join(projectName, 'Resources', fileName);
+    //return path.join(projectName, fileName);
 }
 
 // endregion
