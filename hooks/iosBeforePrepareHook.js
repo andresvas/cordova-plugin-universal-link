@@ -26,9 +26,9 @@ function run(ctx) {
     var oldProjectName = getOldProjectName(iosProjectFilePath);
 
     // if name has not changed - do nothing
-    //if (oldProjectName.length && oldProjectName === newProjectName) {
-    //  return;
-    //}
+    if (oldProjectName.length && oldProjectName === newProjectName) {
+        return;
+    }
 
     console.log('Project name has changed. Renaming .entitlements file.');
 
