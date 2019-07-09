@@ -98,6 +98,8 @@ function addPbxReference(xcodeProject) {
         return;
     }
 
+    console.log('ANDRES: este es el path ' + entitlementsFileName);
+
     console.log('Entitlements file is not in references section, adding it');
     xcodeProject.addResourceFile(entitlementsFileName);
 }
@@ -138,15 +140,20 @@ function loadProjectFile() {
 
     try {
         // try pre-5.0 cordova structure
+        console.log('ANDRES pre-5.0 cordova ');
         platform_ios = context.requireCordovaModule('cordova-lib/src/plugman/platforms')['ios'];
         projectFile = platform_ios.parseProjectFile(iosPlatformPath());
     } catch (e) {
         // let's try cordova 5.0 structure
         try {
+            console.log('ANDRES 5.0 structure ');
+
             platform_ios = context.requireCordovaModule('cordova-lib/src/plugman/platforms/ios');
             projectFile = platform_ios.parseProjectFile(iosPlatformPath());
         } catch (e) {
             // try cordova 7.0 structure
+            console.log('ANDRES 57.0 structure ');
+
             var iosPlatformApi = require(path.join(iosPlatformPath(), '/cordova/Api'));
             var projectFileApi = require(path.join(iosPlatformPath(), '/cordova/lib/projectFile.js'));
             var locations = (new iosPlatformApi()).locations;

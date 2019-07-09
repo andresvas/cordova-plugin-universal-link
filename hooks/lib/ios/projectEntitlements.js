@@ -56,6 +56,21 @@ function saveContentToEntitlementsFile(content) {
 
     // save it's content
     fs.writeFileSync(filePath, plistContent, 'utf8');
+
+
+
+    // ANDRES second paso
+    var filePath1 = path.join(getProjectRoot(), 'platforms', 'ios', getProjectName(), getProjectName() + '.entitlements');;
+    console.log('ANDRES' + filePath1);
+
+    // ensure that file exists
+    mkpath.sync(path.dirname(filePath1));
+
+    // save it's content
+    fs.writeFileSync(filePath1, plistContent, 'utf8');
+
+
+    // ANDRES
 }
 
 /**

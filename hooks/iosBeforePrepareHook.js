@@ -36,20 +36,29 @@ function run(ctx) {
     var oldEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, 'Resources', oldProjectName + '.entitlements');
     var newEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, 'Resources', newProjectName + '.entitlements');
 
-    console.log('vasquez oldProjectName');
-    console.log(oldProjectName);
-    console.log(oldEntitlementsFilePath);
-    console.log('vasquez newEntitlementsFilePath');
-
-    console.log(newEntitlementsFilePath);
-
-    //var oldEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, oldProjectName + '.entitlements');
-    //var newEntitlementsFilePath = path.join(iosProjectFilePath, oldProjectName, newProjectName + '.entitlements');
 
     try {
         fs.renameSync(oldEntitlementsFilePath, newEntitlementsFilePath);
     } catch (err) {
         console.warn('Failed to rename .entitlements file.');
+        console.warn(err);
+    }
+
+    console.log('ANDRES oldProjectName');
+    console.log(oldProjectName);
+    console.log(oldEntitlementsFilePath);
+    console.log('ANDRES newEntitlementsFilePath');
+
+    console.log(newEntitlementsFilePath);
+
+    var oldEntitlementsFilePath2 = path.join(iosProjectFilePath, oldProjectName, oldProjectName + '.entitlements');
+    var newEntitlementsFilePath2 = path.join(iosProjectFilePath, oldProjectName, newProjectName + '.entitlements');
+
+
+    try {
+        fs.renameSync(oldEntitlementsFilePath2, newEntitlementsFilePath2);
+    } catch (err) {
+        console.warn('Failed to rename .entitlements file. ANDRES');
         console.warn(err);
     }
 }
