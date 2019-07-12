@@ -10,8 +10,8 @@
   <license>MIT</license>
   <keywords>cordova,links,universal</keywords>
 
-  <repo>https://github.com/nordnet/cordova-universal-links-plugin</repo>
-  <issue>https://github.com/nordnet/cordova-universal-links-plugin/issues</issue>
+  <repo>https://github.com/andresvas/cordova-plugin-universal-link</repo>
+  <issue>https://github.com/andresvas/cordova-plugin-universal-link/issues</issue>
 
   <engines>
     <engine name="cordova-ios" version=">=3.8"></engine>
@@ -46,6 +46,22 @@
     <host name="prueba-jsalazar.herokuapp.com" scheme="https"/>
     </universal-links>
 
+    </config-file>
+
+    <config-file target="Entitlements-Debug.plist" parent="/plist/dict">
+      <key>com.apple.developer.associated-domains</key>
+        <array>
+          <string>applinks:prueba-jsalazar.herokuapp.com</string>
+        </array>
+           
+    </config-file>
+
+      <config-file target="Entitlements-Release.plist" parent="/plist/dict">
+      <key>com.apple.developer.associated-domains</key>
+        <array>
+          <string>applinks:prueba-jsalazar.herokuapp.com</string>
+        </array>
+           
     </config-file>
 
 <!-- Objective-C Sources -->
