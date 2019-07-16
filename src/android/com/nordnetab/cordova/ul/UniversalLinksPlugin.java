@@ -191,6 +191,7 @@ public class UniversalLinksPlugin extends CordovaPlugin {
 
         // try to find host in the hosts list from the config.xml
         ULHost host = findHostByUrl(launchUri);
+        Log.d("UniversalLinks",host.getName());
         if (host == null) {
             Log.d("UniversalLinks", "Host " + launchUri.getHost() + " is not supported");
             return;
@@ -211,7 +212,11 @@ public class UniversalLinksPlugin extends CordovaPlugin {
         ULHost host = null;
             if ("serverexpress-cddf6.firebaseapp.com".equalsIgnoreCase(url.getHost())) {
              host = new ULHost(url.getHost(),"https", null);
+             Log.d("UniversalLinks", url.getHost());
+
             }
+            Log.d("UniversalLinks", url.getHost());
+
         return host;
     }
 
