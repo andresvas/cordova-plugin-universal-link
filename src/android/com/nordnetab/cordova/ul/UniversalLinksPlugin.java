@@ -210,8 +210,8 @@ public class UniversalLinksPlugin extends CordovaPlugin {
      */
     private ULHost findHostByUrl(Uri url) {
         ULHost host = null;
-            if ("serverexpress-cddf6.firebaseapp.com".equalsIgnoreCase(url.getHost())) {
-             host = new ULHost(url.getHost(),"https", null);
+            if (DEEP_LINK_HOST.equalsIgnoreCase(url.getHost())) {
+             host = new ULHost(url.getHost(),SCHEME, null);
              Log.d("UniversalLinks", url.getHost());
 
             }
