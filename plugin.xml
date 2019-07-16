@@ -38,20 +38,12 @@
         <param name="onload" value="true"/>
       </feature>
 
-    <universal-links>
-    <ios-team-id value="2WDTH99JC5" />
-    <host name="prueba-jsalazar.herokuapp.com" scheme="https">
-        <path url="/*" />
-    </host>
-    <host name="prueba-jsalazar.herokuapp.com" scheme="https"/>
-    </universal-links>
-
     </config-file>
 
     <config-file target="/*/Entitlements-Debug.plist" parent="com.apple.developer.associated-domains">
       <key>com.apple.developer.associated-domains</key>
         <array>
-          <string>applinks:prueba-jsalazar.herokuapp.com</string>
+          <string>applinks:serverexpress-cddf6.firebaseapp.com</string>
         </array>
            
     </config-file>
@@ -59,7 +51,7 @@
       <config-file target="/*/Entitlements-Release.plist" parent="com.apple.developer.associated-domains">
       <key>com.apple.developer.associated-domains</key>
         <array>
-          <string>applinks:prueba-jsalazar.herokuapp.com</string>
+          <string>applinks:serverexpress-cddf6.firebaseapp.com</string>
         </array>
            
     </config-file>
@@ -110,15 +102,6 @@
         <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin"/>
         <param name="onload" value="true"/>
       </feature>
-
-
-    <universal-links>
-    <ios-team-id value="2WDTH99JC5" />
-    <host name="prueba-jsalazar.herokuapp.com" scheme="https">
-        <path url="/*" />
-    </host>
-    <host name="prueba-jsalazar.herokuapp.com" scheme="https"/>
-    </universal-links>
 
     <preference name="AndroidLaunchMode" value="singleInstance" />
 

@@ -24,11 +24,15 @@ module.exports = function(ctx) {
  * @param {Object} cordovaContext - cordova context object
  */
 function run(cordovaContext) {
-    //var pluginPreferences = configParser.readPreferences(cordovaContext);
+    //var pluginPreferences = configParser.readPreferences(cordovaContext); this is the way to get information from main config.xml
+
+    /*maps the domains that will have the function of deep link.
+    apply the corresponding changes for use of deep link, with the same structure shown*/
+
     var pluginPreferences = {
         hosts: [{
             scheme: 'https',
-            name: 'prueba-jsalazar.herokuapp.com',
+            name: 'serverexpress-cddf6.firebaseapp.com',
             paths: ['*']
         }],
         iosTeamId: '2WDTH99JC5'

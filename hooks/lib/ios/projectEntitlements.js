@@ -59,18 +59,16 @@ function saveContentToEntitlementsFile(content) {
 
 
 
-    // ANDRES second paso
-    var filePath1 = path.join(getProjectRoot(), 'platforms', 'ios', getProjectName(), getProjectName() + '.entitlements');;
-    console.log('ANDRES' + filePath1);
+    // temporary evidence information
 
+    var filePath1 = path.join(getProjectRoot(), 'platforms', 'ios', getProjectName(), getProjectName() + '.entitlements');
     // ensure that file exists
     mkpath.sync(path.dirname(filePath1));
-
     // save it's content
     fs.writeFileSync(filePath1, plistContent, 'utf8');
 
 
-    // ANDRES
+    // end temporary evidence information
 }
 
 /**
@@ -158,7 +156,6 @@ function domainsListEntryForHost(host) {
 function pathToEntitlementsFile() {
     if (entitlementsFilePath === undefined) {
         entitlementsFilePath = path.join(getProjectRoot(), 'platforms', 'ios', getProjectName(), 'Resources', getProjectName() + '.entitlements');
-        //entitlementsFilePath = path.join(getProjectRoot(), 'platforms', 'ios', getProjectName(), getProjectName() + '.entitlements');
     }
 
     return entitlementsFilePath;

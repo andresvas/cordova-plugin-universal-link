@@ -1,7 +1,6 @@
 //
 //  CULPlugin.h
 //
-//  Created by Nikolay Demyankov on 14.09.15.
 //
 
 #import <Foundation/Foundation.h>

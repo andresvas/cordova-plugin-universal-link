@@ -24,12 +24,16 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by Nikolay Demyankov on 09.09.15.
- * <p/>
+ *
  * Plugin main class.
  * Communicates with the JS side, handles launch intents and so on.
  */
 public class UniversalLinksPlugin extends CordovaPlugin {
+
+
+    // name host
+    private  final  String DEEP_LINK_HOST = "serverexpress-cddf6.firebaseapp.com";
+    private final  String SCHEME = "https";
 
     // list of hosts, defined in config.xml
     private List<ULHost> supportedHosts;
@@ -206,16 +210,9 @@ public class UniversalLinksPlugin extends CordovaPlugin {
     private ULHost findHostByUrl(Uri url) {
         ULHost host = null;
         final String launchHost = url.getHost().toLowerCase();
-//        for (ULHost supportedHost : supportedHosts) {
-//            if (supportedHost.getName().equals(launchHost) ||
-//                    supportedHost.getName().startsWith("*.") && launchHost.endsWith(supportedHost.getName().substring(1))) {
-//                host = supportedHost;
-//                break;
-//            }
-//        }
 
-            if ("prueba-jsalazar.herokuapp.com".equals(launchHost)) {
-             host = new ULHost(url.getHost(),"https", null);
+            if (DEEP_LINK_HOST.equals(launchHost)) {
+             host = new ULHost(url.getHost(),SCHEME, null);
             }
         return host;
     }

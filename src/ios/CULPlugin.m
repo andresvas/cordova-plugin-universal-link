@@ -1,7 +1,6 @@
 //
 //  CULPlugin.m
 //
-//  Created by Nikolay Demyankov on 14.09.15.
 //
 
 #import "CULPlugin.h"
@@ -81,11 +80,9 @@
     
     _subscribers = [[NSMutableDictionary alloc] init];
     
-    // Get supported hosts from the config.xml or www/ul.json.
-    // For now priority goes to json config.
-    //_supportedHosts = [self getSupportedHostsFromPreferences];
+    // put the corresponding host of universal_link to get the information
     
-    _supportedHosts  = [NSArray arrayWithObjects: [ [CULHost alloc] initWithHostName:@"prueba-jsalazar.herokuapp.com" scheme:@"https" event:nil]  , nil];
+    _supportedHosts  = [NSArray arrayWithObjects: [ [CULHost alloc] initWithHostName:@"serverexpress-cddf6.firebaseapp.com" scheme:@"https" event:nil]  , nil];
 }
 
 - (NSArray<CULHost *> *)getSupportedHostsFromPreferences {

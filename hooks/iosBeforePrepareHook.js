@@ -44,13 +44,7 @@ function run(ctx) {
         console.warn(err);
     }
 
-    console.log('ANDRES oldProjectName');
-    console.log(oldProjectName);
-    console.log(oldEntitlementsFilePath);
-    console.log('ANDRES newEntitlementsFilePath');
-
-    console.log(newEntitlementsFilePath);
-
+    // temporary evidence information
     var oldEntitlementsFilePath2 = path.join(iosProjectFilePath, oldProjectName, oldProjectName + '.entitlements');
     var newEntitlementsFilePath2 = path.join(iosProjectFilePath, oldProjectName, newProjectName + '.entitlements');
 
@@ -61,6 +55,8 @@ function run(ctx) {
         console.warn('Failed to rename .entitlements file. ANDRES');
         console.warn(err);
     }
+
+    // end temporary information
 }
 
 // region Private API
