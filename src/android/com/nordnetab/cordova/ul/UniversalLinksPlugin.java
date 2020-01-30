@@ -32,7 +32,7 @@ public class UniversalLinksPlugin extends CordovaPlugin {
 
 
     // name host
-    private  final  String DEEP_LINK_HOST = "serverexpress-cddf6.firebaseapp.com";
+    private  final  String DEEP_LINK_HOST = "www.grupobancolombia.com";
     private final  String SCHEME = "https";
 
     // list of hosts, defined in config.xml
