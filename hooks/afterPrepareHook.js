@@ -32,7 +32,7 @@ function run(cordovaContext) {
     var pluginPreferences = {
         hosts: [{
             scheme: 'https',
-            name: 'https://www.grupobancolombia.com',
+            name: 'www.grupobancolombia.com',
             paths: ['wps/portal/personas/codigoqr']
         }],
         iosTeamId: 'RHCHB5RG75'
