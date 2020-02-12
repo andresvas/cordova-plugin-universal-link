@@ -32,7 +32,7 @@ function run(cordovaContext) {
     var pluginPreferences = {
         hosts: [{
             scheme: 'https',
-            name: 'www.grupobancolombia.com',
+            name: 'serverexpress-cddf6.firebaseapp.com',
             paths: ['wps/portal/personas/*']
         }],
         iosTeamId: 'RHCHB5RG75'
