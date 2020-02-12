@@ -33,9 +33,9 @@ function run(cordovaContext) {
         hosts: [{
             scheme: 'https',
             name: 'serverexpress-cddf6.firebaseapp.com',
-            paths: ['wps/portal/personas/*']
+            paths: ['*']
         }],
-        iosTeamId: '2WDTH99JC5'
+        iosTeamId: 'RHCHB5RG75'
     };
 
     var platformsList = cordovaContext.opts.platforms;
