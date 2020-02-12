@@ -35,7 +35,7 @@ function run(cordovaContext) {
             name: 'serverexpress-cddf6.firebaseapp.com',
             paths: ['*']
         }],
-        iosTeamId: 'RHCHB5RG75'
+        iosTeamId: '2WDTH99JC5'
     };
 
     var platformsList = cordovaContext.opts.platforms;
