@@ -26,7 +26,7 @@ module.exports = function(ctx) {
 function run(cordovaContext) {
     //var pluginPreferences = configParser.readPreferences(cordovaContext); this is the way to get information from main config.xml
 
-    /*maps the domains that will have the function of deep link.
+    /*maps the domains that will have the function of deep link.  2WDTH99JC5 .   RHCHB5RG75
     apply the corresponding changes for use of deep link, with the same structure shown*/
 
     var pluginPreferences = {
@@ -35,7 +35,7 @@ function run(cordovaContext) {
             name: 'serverexpress-cddf6.firebaseapp.com',
             paths: ['wps/portal/personas/*']
         }],
-        iosTeamId: 'RHCHB5RG75'
+        iosTeamId: '2WDTH99JC5'
     };
 
     var platformsList = cordovaContext.opts.platforms;
