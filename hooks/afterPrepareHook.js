@@ -29,11 +29,20 @@ function run(cordovaContext) {
     /*maps the domains that will have the function of deep link.  2WDTH99JC5 .   RHCHB5RG75
     apply the corresponding changes for use of deep link, with the same structure shown*/
 
-    var pluginPreferences = {
+    var pluginPreferencesIOS = {
         hosts: [{
             scheme: 'https',
             name: 'serverexpress-cddf6.firebaseapp.com',
             paths: ['*']
+        }],
+        iosTeamId: '2WDTH99JC5'
+    };
+
+    var pluginPreferences = {
+        hosts: [{
+            scheme: 'https',
+            name: 'www.grupobancolombia.com',
+            paths: ['wps/portal/personas/*']
         }],
         iosTeamId: '2WDTH99JC5'
     };
@@ -60,7 +69,7 @@ function run(cordovaContext) {
                 }
             case IOS:
                 {
-                    activateUniversalLinksInIos(cordovaContext, pluginPreferences);
+                    activateUniversalLinksInIos(cordovaContext, pluginPreferencesIOS);
                     break;
                 }
         }
